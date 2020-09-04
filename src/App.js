@@ -33,6 +33,19 @@ function App() {
         <div>
           <span>find out more &#8594;</span>
         </div>
+
+        <div className="app__aboutMe">
+          <p>
+            const aboutMe = &#123; <br /> Age: 19, <br /> Location: 'Tampa, FL'
+            <br />
+            Interests: 'Web Development, Basketball, Video Games, Anime, Design'
+            Description: 'Front End Developer with a lot of passion for bringing
+            websites to life. I started Web Development 9th grade year in my
+            first Web Design class and I fell in love. I would like to learn
+            more about UI/UX!' <br />
+            &#125;
+          </p>
+        </div>
       </section>
       <section className="app__sec2">
         <h2>Skills</h2>
