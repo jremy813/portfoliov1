@@ -36,14 +36,27 @@ function App() {
 
         <div className="app__aboutMe">
           <p>
-            const aboutMe = &#123; <br /> Age: 19, <br /> Location: 'Tampa, FL'
+            <span className="purple">const </span>
+            <span className="blue">aboutMe</span>
+            <span className="purple"> =</span>
+            <span className="gold"> &#123;</span> <br /> Age:{" "}
+            <span className="orange">19,</span>
+            <br /> Location: <span className="green">'Tampa, FL', </span>
             <br />
-            Interests: 'Web Development, Basketball, Video Games, Anime, Design'
-            Description: 'Front End Developer with a lot of passion for bringing
-            websites to life. I started Web Development 9th grade year in my
-            first Web Design class and I fell in love. I would like to learn
-            more about UI/UX!' <br />
-            &#125;
+            Interests:
+            <span className="green">
+              'Web Development, Basketball, Video Games, Anime, Design',
+            </span>
+            <br />
+            Description:
+            <span className="green">
+              'Front End Developer with a lot of passion for bringing websites
+              to life. I started Web Development 9th grade year in my first Web
+              Design class and I fell in love. I would like to learn more about
+              UI/UX!'
+            </span>
+            <br />
+            <span className="gold">&#125;</span>
           </p>
         </div>
       </section>

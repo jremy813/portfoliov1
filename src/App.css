@@ -3,7 +3,7 @@
 }
 
 .app {
-  background-color: #021d43;
+  background-color: #102e4a;
   color: white;
   height: 100vh;
 }
@@ -32,6 +32,36 @@ header > img {
   text-align: right;
   display: block;
   margin-right: 3rem;
+}
+
+.app__aboutMe {
+  margin-left: 5rem;
+  padding: 1rem;
+  background-color: #333;
+  width: 50%;
+  margin-top: 3rem;
+  border-radius: 20px;
+  color: #bfc7d5;
+}
+
+.orange {
+  color: #f78c6c;
+}
+
+.blue {
+  color: #82aaff;
+}
+
+.purple {
+  color: #c792ea;
+}
+
+.green {
+  color: #c3e88d;
+}
+
+.gold {
+  color: #ffcb6b;
 }
 
 /* Styles for horizontal scrolling */
