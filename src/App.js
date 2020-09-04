@@ -1,24 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useEffect } from "react";
+import "./App.css";
+import Logo from "./logo_transparent.png";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 function App() {
+  let container = useRef(null);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(container, {
+      x: () =>
+        -(container.scrollWidth - document.documentElement.clientWidth) + "px",
+      ease: "none",
+      scrollTrigger: {
+        trigger: container,
+        invalidateOnRefresh: true,
+        pin: true,
+        scrub: 1,
+        end: () => "+=" + container.offsetWidth,
+      },
+    });
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div ref={(el) => (container = el)} className="app">
+      <section className="app__sec1">
+        <div className="app__sec1info">
+          <h1>Jeremy Watkins</h1>
+          <h2>Front End Developer</h2>
+        </div>
+        <div>
+          <span>find out more &#8594;</span>
+        </div>
+      </section>
+      <section className="app__sec2">
+        <h2>Skills</h2>
+      </section>
     </div>
   );
 }
