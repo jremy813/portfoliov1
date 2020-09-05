@@ -42,41 +42,45 @@ function App() {
             <h2>Front End Developer</h2>
           </div>
           <div>
-            <span>more about me &#8594;</span>
+            <span>projects &#8594;</span>
           </div>
-
-          <div className="app__aboutMe">
-            <p>
-              <span className="purple">const </span>
-              <span className="blue">aboutMe</span>
-              <span className="purple"> =</span>
-              <span className="gold"> &#123;</span> <br /> Age:{" "}
-              <span className="orange">19,</span>
-              <br /> Location: <span className="green">'Tampa, FL', </span>
-              <br />
-              Interests:
-              <span className="green">
-                'Web Development, Basketball, Video Games, Anime, Design',
-              </span>
-              <br />
-              Description:
-              <span className="green">
-                'Front End Developer with a lot of passion for bringing websites
-                to life. I started Web Development 9th grade year in my first
-                Web Design class and I fell in love. I would like to learn more
-                about UI/UX!'
-              </span>
-              <br />
-              <span className="gold">&#125;</span>
-            </p>
-            <div className="app__skills1">
-              <img src={HtmlLogo} alt="html logo" />
-              <img src={CssLogo} alt="css logo" />
-              <img src={JsLogo} alt="avascript logo" />
-              <img src={ReactLogo} alt="react logo" />
-              <img src={NextJsLogo} alt="nextjs logo" />
-              <img src={GitLogo} alt="git logo" />
-              <img src={FirebaseLogo} alt="firebase logo" />
+          <div className="app__about">
+            <div className="app__aboutMe">
+              <p>
+                <span className="purple">const </span>
+                <span className="blue">aboutMe</span>
+                <span className="purple"> =</span>
+                <span className="gold"> &#123;</span> <br /> Age:
+                <span className="orange">19,</span>
+                <br /> Location: <span className="green">'Tampa, FL', </span>
+                <br />
+                Interests:
+                <span className="green">
+                  'Web Development, Basketball, Video Games, Anime, Design',
+                </span>
+                <br />
+                Description:
+                <span className="green">
+                  'Front End Developer with a lot of passion for bringing
+                  websites to life. I started Web Development 9th grade year in
+                  my first Web Design class and I fell in love. I would like to
+                  learn more about UI/UX!'
+                </span>
+                <br />
+                <span className="gold">&#125;</span>
+              </p>
+              <div className="app__skills1">
+                <img src={HtmlLogo} alt="html logo" />
+                <img src={CssLogo} alt="css logo" />
+                <img src={JsLogo} alt="avascript logo" />
+                <img src={ReactLogo} alt="react logo" />
+                <img src={NextJsLogo} alt="nextjs logo" />
+                <img src={GitLogo} alt="git logo" />
+                <img src={FirebaseLogo} alt="firebase logo" />
+              </div>
+            </div>
+            <div className="app__aboutMeTag">
+              <span>&#8592; about me </span>
             </div>
           </div>
         </section>
