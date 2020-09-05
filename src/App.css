@@ -3,7 +3,7 @@
 }
 
 .app {
-  background-color: #102e4a;
+  background-color: #0d0630;
   color: white;
   height: 100vh;
 }
@@ -20,7 +20,13 @@
 }
 
 .app__sec1 {
-  padding-top: 5rem;
+  padding-top: 8rem;
+}
+header {
+  background-color: #0d0630;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 header > img {
@@ -64,6 +70,49 @@ header > img {
   color: #ffcb6b;
 }
 
+.app__sec3 {
+  width: 100%;
+  height: 100%;
+  background-color: #0d0630;
+}
+
+.app__sec3 > h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.app__projects {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  grid-gap: 50px;
+}
+
+.app__projects > div {
+  width: 350px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.app__skills1 {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+}
+
+.app__skills1 > img {
+  width: 50px;
+  height: auto;
+}
+
 /* Styles for horizontal scrolling */
 
 .app {
@@ -81,5 +130,6 @@ header > img {
 .app__sec2 {
   width: 50%;
   height: 100%;
-  background-color: #0a244a;
+  background-color: #fff;
+  color: black;
 }
