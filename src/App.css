@@ -47,7 +47,6 @@ header > img {
   padding: 1rem;
   background-color: #292d3e;
   width: 50%;
-  margin-top: 3rem;
   border-radius: 20px;
   color: #bfc7d5;
 }
@@ -154,6 +153,7 @@ header > img {
 @media only screen and (max-width: 1000px) {
   .app {
     display: block;
+    height: initial;
   }
 
   .app__sec1 {
@@ -167,5 +167,26 @@ header > img {
   .app__projects {
     grid-template-columns: 1fr 1fr;
     margin: 0;
+  }
+
+  .app__sec1 > div > span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 796px) {
+  .app__projects {
+    grid-template-columns: 1fr;
+  }
+
+  .app__skills1 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media only screen and (max-width: 488px) {
+  .app__skills1 {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
   }
 }
