@@ -15,20 +15,24 @@ function App() {
   let container = useRef(null);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to(container, {
-      x: () =>
-        -(container.scrollWidth - document.documentElement.clientWidth) + "px",
-      ease: "none",
-      scrollTrigger: {
-        trigger: container,
-        invalidateOnRefresh: true,
-        pin: true,
-        scrub: 1,
-        end: () => "+=" + container.offsetWidth,
+    ScrollTrigger.matchMedia({
+      "(min-width: 1000px)": function () {
+        gsap.to(container, {
+          x: () =>
+            -(container.scrollWidth - document.documentElement.clientWidth) +
+            "px",
+          ease: "none",
+          scrollTrigger: {
+            trigger: container,
+            invalidateOnRefresh: true,
+            pin: true,
+            scrub: 1,
+            end: () => "+=" + container.offsetWidth,
+          },
+        });
       },
     });
-  });
+  }, []);
 
   return (
     <>
