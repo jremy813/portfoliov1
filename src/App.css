@@ -3,13 +3,14 @@
 }
 
 .app {
-  background-color: #fe5f55;
+  background-color: #27233a;
   color: white;
   height: 100vh;
 }
 
 .app__sec1info {
   margin-left: 5rem;
+  padding-bottom: 2rem;
 }
 
 .app__sec1 > div > h1 {
@@ -25,7 +26,7 @@
   padding-top: 8rem;
 }
 header {
-  background-color: #fe5f55;
+  background-color: #27233a;
   width: 100%;
   position: absolute;
   top: 0;
@@ -83,7 +84,8 @@ header > img {
 
 .app__sec3 {
   height: 100%;
-  background-color: #777da7;
+  background-color: #332e4c;
+  padding-top: 2rem;
 }
 
 .app__sec3 > h2 {
@@ -162,6 +164,16 @@ header > img {
 
   .app__sec3 {
     height: initial;
+    margin-top: 5rem;
+  }
+
+  .app__sec1info {
+    padding-bottom: 4rem;
+  }
+
+  .app__sec3 > h2 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .app__projects {
@@ -188,5 +200,9 @@ header > img {
   .app__skills1 {
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
+  }
+
+  .app__skills1 {
+    display: none;
   }
 }
