@@ -45,16 +45,16 @@ function App() {
   // Animations for projects
   function mouseOver(el) {
     gsap.to(el, {
-      scale: 1.1,
-      duration: 1,
-      ease: "power2",
+      scale: 1.03,
+      duration: 0.5,
+      ease: "power3",
     });
   }
 
   function mouseOut(el) {
     gsap.to(el, {
       scale: 1,
-      duration: 1,
+      duration: 0.5,
       ease: "power3",
     });
   }
@@ -118,16 +118,19 @@ function App() {
           <h2>Projects</h2>
           <div className="app__projects">
             {data.map((data) => (
-              <a rel="noopener noreferrer" target="_blank" href={data.link}>
-                <div
-                  ref={(el) => (data.ref = el)}
-                  onMouseEnter={() => mouseOver(data.ref)}
-                  onMouseOut={() => mouseOut(data.ref)}
-                  style={{
-                    backgroundImage: data.image,
-                  }}
-                ></div>
-              </a>
+              <div>
+                <h3>{data.name}</h3>
+                <a rel="noopener noreferrer" target="_blank" href={data.link}>
+                  <div
+                    ref={(el) => (data.ref = el)}
+                    onMouseEnter={() => mouseOver(data.ref)}
+                    onMouseOut={() => mouseOut(data.ref)}
+                    style={{
+                      backgroundImage: data.image,
+                    }}
+                  ></div>
+                </a>
+              </div>
             ))}
           </div>
         </section>
