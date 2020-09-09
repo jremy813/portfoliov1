@@ -30,6 +30,29 @@ header {
   width: 100%;
   position: absolute;
   top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > div {
+  margin-right: 1rem;
+}
+
+header > div > .fa-twitter,
+.fa-instagram,
+.fa-linkedin,
+.fa-github {
+  font-size: 2rem;
+  padding: 0.6rem;
+  cursor: pointer;
+}
+
+header > div > .fa-twitter:hover,
+.fa-instagram:hover,
+.fa-linkedin:hover,
+.fa-github:hover {
+  color: #c3e88d;
 }
 
 header > img {
@@ -170,6 +193,7 @@ header > img {
   .app__sec3 {
     height: initial;
     margin-top: 5rem;
+    width: 100%;
   }
 
   .app__sec1info {

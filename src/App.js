@@ -11,7 +11,14 @@ import FirebaseLogo from "./assets/firebaselogo.png";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import data from "./projectData";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faTwitter,
+  faInstagram,
+  faLinkedin,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 function App() {
   // assigning ref values to reference them in animations
   let container = useRef(null);
@@ -64,6 +71,12 @@ function App() {
       <div ref={(el) => (container = el)} className="app">
         <header>
           <img src={Logo} alt="logo" />
+          <div>
+            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faLinkedin} />
+            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon icon={faInstagram} />
+          </div>
         </header>
         <section className="app__sec1">
           <div className="app__sec1info">
