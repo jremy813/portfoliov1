@@ -10,7 +10,7 @@ import GitLogo from "./assets/gitlogo.png";
 import FirebaseLogo from "./assets/firebaselogo.png";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import data from "./projectdata";
+import data from "./projectData";
 
 function App() {
   // assigning ref values to reference them in animations
