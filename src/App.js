@@ -10,6 +10,7 @@ import GitLogo from "./assets/gitlogo.png";
 import FirebaseLogo from "./assets/firebaselogo.png";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import data from "./projectdata";
 
 function App() {
   // assigning ref values to reference them in animations
@@ -116,58 +117,18 @@ function App() {
         <section className="app__sec3">
           <h2>Projects</h2>
           <div className="app__projects">
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://loving-newton-de36d1.netlify.app/"
-            >
-              <div
-                ref={(el) => (div1 = el)}
-                onMouseEnter={() => mouseOver(div1)}
-                onMouseOut={() => mouseOut(div1)}
-                style={{
-                  backgroundImage: `url('https://i.gyazo.com/2a9aa2c4243a305345338e20f8e829c9.png')`,
-                }}
-              ></div>
-            </a>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://becraft.vercel.app/"
-            >
-              <div
-                ref={(el) => (div2 = el)}
-                onMouseEnter={() => mouseOver(div2)}
-                onMouseOut={() => mouseOut(div2)}
-                style={{
-                  backgroundImage: `url('https://i.gyazo.com/961196089d40a8b15092bc374aaac37c.jpg')`,
-                }}
-              ></div>
-            </a>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://zealous-golick-fdcd4d.netlify.app/"
-            >
-              <div
-                ref={(el) => (div3 = el)}
-                onMouseEnter={() => mouseOver(div3)}
-                onMouseOut={() => mouseOut(div3)}
-                style={{
-                  backgroundImage: `url('https://i.gyazo.com/4986a5c66b43e52b21f6fcf4c2addc0f.png')`,
-                }}
-              ></div>
-            </a>
-            <a href="#">
-              <div
-                ref={(el) => (div4 = el)}
-                onMouseEnter={() => mouseOver(div4)}
-                onMouseOut={() => mouseOut(div4)}
-                style={{
-                  backgroundImage: `url('https://i.gyazo.com/46685e12f7473abd351d5b9cd89f9f65.png')`,
-                }}
-              ></div>
-            </a>
+            {data.map((data) => (
+              <a rel="noopener noreferrer" target="_blank" href={data.link}>
+                <div
+                  ref={(el) => (data.ref = el)}
+                  onMouseEnter={() => mouseOver(data.ref)}
+                  onMouseOut={() => mouseOut(data.ref)}
+                  style={{
+                    backgroundImage: data.image,
+                  }}
+                ></div>
+              </a>
+            ))}
           </div>
         </section>
       </div>
