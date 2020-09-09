@@ -12,7 +12,14 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 function App() {
+  // assigning ref values to reference them in animations
   let container = useRef(null);
+  let div1 = useRef(null);
+  let div2 = useRef(null);
+  let div3 = useRef(null);
+  let div4 = useRef(null);
+
+  // Scroll Trigger gsap animation for horizontal scrolling
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.matchMedia({
@@ -33,6 +40,23 @@ function App() {
       },
     });
   }, []);
+
+  // Animations for projects
+  function mouseOver(el) {
+    gsap.to(el, {
+      scale: 1.1,
+      duration: 1,
+      ease: "power2",
+    });
+  }
+
+  function mouseOut(el) {
+    gsap.to(el, {
+      scale: 1,
+      duration: 1,
+      ease: "power3",
+    });
+  }
 
   return (
     <>
@@ -92,16 +116,58 @@ function App() {
         <section className="app__sec3">
           <h2>Projects</h2>
           <div className="app__projects">
-            <div
-              style={{
-                backgroundImage: `url('https://i.gyazo.com/2a9aa2c4243a305345338e20f8e829c9.png')`,
-              }}
-            ></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://loving-newton-de36d1.netlify.app/"
+            >
+              <div
+                ref={(el) => (div1 = el)}
+                onMouseEnter={() => mouseOver(div1)}
+                onMouseOut={() => mouseOut(div1)}
+                style={{
+                  backgroundImage: `url('https://i.gyazo.com/2a9aa2c4243a305345338e20f8e829c9.png')`,
+                }}
+              ></div>
+            </a>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://becraft.vercel.app/"
+            >
+              <div
+                ref={(el) => (div2 = el)}
+                onMouseEnter={() => mouseOver(div2)}
+                onMouseOut={() => mouseOut(div2)}
+                style={{
+                  backgroundImage: `url('https://i.gyazo.com/961196089d40a8b15092bc374aaac37c.jpg')`,
+                }}
+              ></div>
+            </a>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://zealous-golick-fdcd4d.netlify.app/"
+            >
+              <div
+                ref={(el) => (div3 = el)}
+                onMouseEnter={() => mouseOver(div3)}
+                onMouseOut={() => mouseOut(div3)}
+                style={{
+                  backgroundImage: `url('https://i.gyazo.com/4986a5c66b43e52b21f6fcf4c2addc0f.png')`,
+                }}
+              ></div>
+            </a>
+            <a href="#">
+              <div
+                ref={(el) => (div4 = el)}
+                onMouseEnter={() => mouseOver(div4)}
+                onMouseOut={() => mouseOut(div4)}
+                style={{
+                  backgroundImage: `url('https://i.gyazo.com/46685e12f7473abd351d5b9cd89f9f65.png')`,
+                }}
+              ></div>
+            </a>
           </div>
         </section>
       </div>
