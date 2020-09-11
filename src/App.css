@@ -39,13 +39,14 @@ header > div {
   margin-right: 1rem;
 }
 
-header > div > .fa-twitter,
+header > div > a > .fa-twitter,
 .fa-instagram,
 .fa-linkedin,
 .fa-github {
   font-size: 2rem;
   padding: 0.6rem;
   cursor: pointer;
+  color: white;
 }
 
 header > div > .fa-twitter:hover,

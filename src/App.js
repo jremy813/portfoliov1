@@ -17,8 +17,8 @@ import {
   faTwitter,
   faInstagram,
   faLinkedin,
-  faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+
 function App() {
   // assigning ref values to reference them in animations
   let container = useRef(null);
@@ -72,10 +72,18 @@ function App() {
         <header>
           <img src={Logo} alt="logo" />
           <div>
-            <FontAwesomeIcon icon={faGithub} />
-            <FontAwesomeIcon icon={faLinkedin} />
-            <FontAwesomeIcon icon={faTwitter} />
-            <FontAwesomeIcon icon={faInstagram} />
+            <a href="#">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a href="#">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+            <a href="#">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a href="#">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
           </div>
         </header>
         <section className="app__sec1">
