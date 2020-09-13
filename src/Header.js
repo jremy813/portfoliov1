@@ -15,10 +15,18 @@ function Header() {
       <header>
         <img src={Logo} alt="logo" />
         <div>
-          <FontAwesomeIcon icon={faGithub} />
-          <FontAwesomeIcon icon={faLinkedin} />
-          <FontAwesomeIcon icon={faTwitter} />
-          <FontAwesomeIcon icon={faInstagram} />
+          <a href="#">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
         </div>
       </header>
     </>
