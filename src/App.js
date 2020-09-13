@@ -9,6 +9,7 @@ import NextJsLogo from "./assets/nextjslogo.png";
 import GitLogo from "./assets/gitlogo.png";
 import FirebaseLogo from "./assets/firebaselogo.png";
 import gsap from "gsap";
+import { TimelineLite } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import data from "./projectData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,13 +23,22 @@ import {
 function App() {
   // assigning ref values to reference them in animations
   let container = useRef(null);
+  let textHeader = useRef(null);
+  let textHeader2 = useRef(null);
+  let aboutMe = useRef(null);
   let div1 = useRef(null);
   let div2 = useRef(null);
   let div3 = useRef(null);
   let div4 = useRef(null);
 
+  let tl = new TimelineLite();
+
   // Scroll Trigger gsap animation for horizontal scrolling
   useEffect(() => {
+    tl.from(textHeader, 1.2, { y: -1000, ease: "Power3.easeOut" })
+      .from(textHeader2, 1.1, { y: 1000, ease: "Power3.easeOut" })
+      .from(aboutMe, 1.2, { x: -1000, ease: "Power3.easeOut" });
+
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.matchMedia({
       "(min-width: 1000px)": function () {
@@ -72,30 +82,22 @@ function App() {
         <header>
           <img src={Logo} alt="logo" />
           <div>
-            <a href="#">
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a href="#">
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a href="#">
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a href="#">
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
+            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faLinkedin} />
+            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon icon={faInstagram} />
           </div>
         </header>
         <section className="app__sec1">
           <div className="app__sec1info">
-            <h1>Jeremy Watkins</h1>
-            <h2>Front End Developer</h2>
+            <h1 ref={(el) => (textHeader = el)}>Jeremy Watkins</h1>
+            <h2 ref={(el) => (textHeader2 = el)}>Front End Developer</h2>
           </div>
           <div>
             <span>projects &#8594;</span>
           </div>
           <div className="app__about">
-            <div className="app__aboutMe">
+            <div ref={(el) => (aboutMe = el)} className="app__aboutMe">
               <p>
                 <span className="purple">const </span>
                 <span className="blue">aboutMe</span>
