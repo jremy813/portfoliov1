@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import "./App.css";
-import Logo from "./assets/logo_transparent.png";
+import Header from "./Header.js";
 import HtmlLogo from "./assets/htmllogo.png";
 import CssLogo from "./assets/csslogo.png";
 import JsLogo from "./assets/jslogo.png";
@@ -12,13 +12,6 @@ import gsap from "gsap";
 import { TimelineLite } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import data from "./projectData";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faTwitter,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   // assigning ref values to reference them in animations
@@ -79,15 +72,7 @@ function App() {
   return (
     <>
       <div ref={(el) => (container = el)} className="app">
-        <header>
-          <img src={Logo} alt="logo" />
-          <div>
-            <FontAwesomeIcon icon={faGithub} />
-            <FontAwesomeIcon icon={faLinkedin} />
-            <FontAwesomeIcon icon={faTwitter} />
-            <FontAwesomeIcon icon={faInstagram} />
-          </div>
-        </header>
+        <Header />
         <section className="app__sec1">
           <div className="app__sec1info">
             <h1 ref={(el) => (textHeader = el)}>Jeremy Watkins</h1>
