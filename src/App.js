@@ -29,7 +29,7 @@ function App() {
   // Scroll Trigger gsap animation for horizontal scrolling
   useEffect(() => {
     tl.from(textHeader, 1.2, { y: -1000, ease: "Power3.easeOut" })
-      .from(textHeader2, 1.1, { y: 1000, ease: "Power3.easeOut" })
+      .from(textHeader2, 0.9, { y: 1000, ease: "Power3.easeOut" })
       .from(aboutMe, 1.2, { x: -1000, ease: "Power3.easeOut" });
 
     gsap.registerPlugin(ScrollTrigger);

@@ -186,6 +186,13 @@
     grid-template-columns: 1fr;
   }
 
+  .app__sec1info {
+    margin-left: 2rem;
+  }
+  .app__aboutMe {
+    margin-left: 2rem;
+  }
+
   .app__skills1 {
     grid-template-columns: repeat(5, 1fr);
   }
