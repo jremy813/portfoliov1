@@ -15,10 +15,10 @@ function Header() {
       <header>
         <img src={Logo} alt="logo" />
         <div>
-          <a href="#">
+          <a  rel="noopener noreferrer" target='_blank' href="https://github.com/jremy813">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="#">
+          <a rel="noopener noreferrer" target='_blank' href="https://www.linkedin.com/in/jeremy-watkins-23bb8216b/">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
           <a href="#">
